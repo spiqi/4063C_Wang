@@ -15,25 +15,35 @@ You will learn how to connect to Snowflake and execute a query using python.
         ```
         pip install --upgrade snowflake-connector-python
     * See [Installing the Python Connector](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-install)
-* [Module 2](https://github.com/bjornburrell/Module2) repo cloned to your local machine
+* [4063C_24](https://github.com/IT4063/4063C_24) repo forked and cloned to your machine
+    * See [Forking a Repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
     * See [Cloning a Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+* Environment variables set
+    * Run the following command to add your Snowflake User and Pass to your environment variables
+        * MAC/LINUX
+            ```
+            export SNOWFLAKE_PASS='password'
+            export SNOWFLAKE_USER='username'
+            export SNOWFLAKE_ACCT='isa12503.east-us-2.azure'
+        * PC
+            ```
+            set SNOWFLAKE_PASS=password
+            set SNOWFLAKE_USER=username 
+            set SNOWFLAKE_ACCT=isa12503.east-us-2.azure
+    * See [Connecting to Snowflake with the Python Connector](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-connect)
 
 
-
-### Test the connection
-Let's use the script, test_connection.py to test our connection to snowflake
-* Open test_connection.py in the IDE of your choice
-* Input your user name, password in the corresponding fields
-    * Reach out if you need a login or are having trouble logging in
-* Open up a terminal in the location where the file is saved, and run the following command:
+### 1. Test the connection
+Use test_connection.py to test the connection to snowflake
+* Open up a terminal, change directories to your repo, and run the following command:
 
     ```
     python test_connection.py
-### Executing queries
+### 2. Executing queries
 Use the run_query.py script to query Snowflake
 * Open run_query.py in the IDE of your choice
 * Replace query variable value with the query you'd like to run
-* Open up a terminal in the location where the file is saved, and run the following command:
+* Open up a terminal change directories to your repo, and run the following command:
 
     ```
     python run_query.py
