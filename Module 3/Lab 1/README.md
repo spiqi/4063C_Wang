@@ -8,7 +8,7 @@ You will learn how to connect to Snowflake and execute a query using python.
 * Python installed
     * See [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
 * Access to Snowflake sandbox
-    * See [Downloading Python](https://uc.instructure.com/courses/1666166/pages/module-2-snowflake-info?module_item_id=71810477)
+    * See [module-2-snowflake-info](https://uc.instructure.com/courses/1666166/pages/module-2-snowflake-info?module_item_id=71810477)
 *  Snowflake Connector for Python
      * You'll do this via the Python package installer 'pip' by running the following command
 
