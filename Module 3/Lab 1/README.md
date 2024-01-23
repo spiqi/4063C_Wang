@@ -47,7 +47,14 @@ Use the run_query.py script to query Snowflake
 
     ```
     python run_query.py
-    
+
+### 3. Create a database
+Create a new file, name it create_database.py, use it to create your own database
+* Create create_database.py in the IDE of your choice
+* Add the SQL statement needed to create a database - [HINT](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-example#creating-a-database-schema-and-warehouse)
+* Open up a terminal change directories to your repo, and run the following command: 
+    ```
+    python create_database.py
 ## Guides, useful resources, references etc.
 * [Ask your classmates](https://uc.instructure.com/courses/1666166/discussion_topics/8564268)
 * [Ask Stack Overflow](https://stackoverflow.com/)
