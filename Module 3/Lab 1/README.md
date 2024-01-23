@@ -1,5 +1,5 @@
 # Module 3 Lab: Snowflake + Python
-Overview of Snowflake + Python. We will use python and the Snowflake Python Connector to connect to Snowflake and execute a query.
+You will learn how to connect to Snowflake and execute a query using python.
 
 ## Getting Started
 
