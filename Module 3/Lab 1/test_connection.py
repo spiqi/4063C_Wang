@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import snowflake.connector
+import os
 
 # Gets the version
 ctx = snowflake.connector.connect(
-    user='<your_user_name>',
-    password='<your_password>',
-    account='<your_account_name>'
+    user= os.getenv('SNOWFLAKE_USER'),
+    password= os.getenv('SNOWFLAKE_PASS'),
+    account=os.getenv('SNOWFLAKE_ACCT'),
+    role='ACCOUNTADMIN'
     )
 cs = ctx.cursor()
 try:

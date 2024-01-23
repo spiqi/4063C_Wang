@@ -1,19 +1,27 @@
 #!/usr/bin/env python
 import snowflake.connector
+import os
 
-query = "SELECT 1"
+# Query we will execute
+query = "select user_name, event_timestamp from snowflake.account_usage.login_history order by event_timestamp desc"
 
-# Gets the version
+# Define connection
 ctx = snowflake.connector.connect(
-    user='<your_user_name>',
-    password='<your_password>',
-    account='<your_account_name>'
+    user=os.getenv('SNOWFLAKE_USER'),
+    password= os.getenv('SNOWFLAKE_PASS'),
+    account=os.getenv('SNOWFLAKE_ACCT'),
+    role='ACCOUNTADMIN'
     )
-cs = ctx.cursor()
 try:
-    cs.execute(query)
-    one_row = cs.fetchone()
-    print(one_row[0])
+    # Create connection
+    cs = ctx.cursor()
+
+    # Get the results from a query.
+    query = cs.execute(query)
+    query_id = cs.sfqid
+    print(query_id)
+    for (user_name, event_timestamp) in query:
+        print('{0}, {1}'.format(user_name, event_timestamp))
 finally:
     cs.close()
 ctx.close()
