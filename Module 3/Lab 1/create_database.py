@@ -10,10 +10,10 @@ ctx = snowflake.connector.connect(
     )
 cs = ctx.cursor()
 try:
- conn.cursor().execute("CREATE WAREHOUSE IF NOT EXISTS tiny_warehouse_mg")
- conn.cursor().execute("CREATE DATABASE IF NOT EXISTS testdb_mg")
- conn.cursor().execute("USE DATABASE testdb_mg")
- conn.cursor().execute("CREATE SCHEMA IF NOT EXISTS testschema_mg")
+ cs.cursor().execute("CREATE WAREHOUSE IF NOT EXISTS tiny_warehouse_mg")
+ cs.cursor().execute("CREATE DATABASE IF NOT EXISTS testdb_mg")
+ cs.cursor().execute("USE DATABASE testdb_mg")
+ cs.cursor().execute("CREATE SCHEMA IF NOT EXISTS testschema_mg")
 finally:
     cs.close()
 ctx.close()
